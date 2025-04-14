@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Nav from "./components/nav";
 
 export const metadata: Metadata = {
   title: "여긴 어때",
@@ -12,7 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }
