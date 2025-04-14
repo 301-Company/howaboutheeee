@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+const links = [
+  { name: "어워드", href: "/award" },
+  { name: "로그인", href: "/log-in" },
+  { name: "회원가입", href: "/join-us" },
+];
+
 export default function Nav() {
   return (
     <header>
@@ -11,15 +17,11 @@ export default function Nav() {
           <li>
             <div>검색</div>
           </li>
-          <li>
-            <Link href="/award">어워드</Link>
-          </li>
-          <li>
-            <Link href="log-in">로그인</Link>
-          </li>
-          <li>
-            <Link href="join-us">회원가입</Link>
-          </li>
+          {links.map((link) => (
+            <li key={link.name}>
+              <Link href={link.href}>{link.name}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
