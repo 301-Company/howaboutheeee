@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Nav from "./components/nav";
+import "./styles/reset.css";
 
 export const metadata: Metadata = {
   title: "여긴 어때",
